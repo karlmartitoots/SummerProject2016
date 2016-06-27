@@ -9,7 +9,7 @@ with a system for users to log into, chat and play.
 ##Motivation
 
 The main aim of the project is to **advance skills in object-oriented design and programming**. A secondary goal is to
-**have fun**, **create something entertaining* and to **keep in close approach with object-oriented programming** for future
+**have fun**, **create something entertaining** and to **keep in close approach with object-oriented programming** for future
 goals for the contributors' programming skillset.
 
 **Schedule
