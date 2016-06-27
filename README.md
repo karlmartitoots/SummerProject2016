@@ -12,10 +12,10 @@ The main aim of the project is to **advance skills in object-oriented design and
 **have fun**, **create something entertaining** and to **keep in close approach with object-oriented programming** for future
 goals for the contributors' programming skillset.
 
-**Schedule
+##Schedule
 
 | Timeperiod    | Objective     |
-|:-------------:|:-------------:|
+|:-------------:|:-------------|
 | June 27th - July 3rd | Initialize the project, get some people together, begin with some commits |
 | July 4th - July 10th | Begin some work on the main stage, where the library of games will be set |
 | July 11th - July 17th | Continue work on the main stage, create a system for users and a few settings |
