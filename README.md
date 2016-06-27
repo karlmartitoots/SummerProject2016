@@ -22,3 +22,8 @@ goals for the contributors' programming skillset.
 | July 18th - July 24th | Continue work on the previous matters and try to create a few initial games for the library |
 | July 25th - July 31st | Have the main stage and user system working properly and start work on a chat lobby |
 | August 1st - ... | Plans to be made...   |
+
+##Contributors
+
+Karl Marti Toots - [github](https://github.com/karlmartitoots)
+Aleksis Zalitis - [github](https://github.com/pixenix)
