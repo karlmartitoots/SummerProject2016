@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class LogInScene extends Scene{
     public LogInScene(Group parentGroup, Stage primaryStage) {
         super(parentGroup);
-
+//
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
