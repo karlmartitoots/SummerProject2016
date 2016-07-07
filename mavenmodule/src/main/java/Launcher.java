@@ -1,10 +1,10 @@
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import snake.gui.SetupScene;
 
 public class Launcher extends Application{
     public static void main(String[] args) {
@@ -13,13 +13,41 @@ public class Launcher extends Application{
 
     public void start(Stage primaryStage) throws Exception {
 
-        StackPane sp = new StackPane();
-        Button snakeButton = new Button("snake");
-        snakeButton.setOnAction(event ->
-                primaryStage.setScene(new SetupScene(new Group(), primaryStage))
+        primaryStage.setTitle("AppCenter");
+        VBox base = new VBox();
+        MenuBar mb = new MenuBar();
+        ScrollPane sp = new ScrollPane();
+        sp.setFitToHeight(true);
+        sp.setFitToWidth(true);
+        sp.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        sp.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        VBox gamesMenu = new VBox();
+        Button snake = new Button();
+        snake.setPrefSize(290, 100);
+        snake.setMaxSize(290, 100);
+        snake.setMinSize(290, 100);
+        Image imageSnake = new Image("snakegraphic.jpg");
+        snake.setGraphic(new ImageView(imageSnake));
+        snake.setOnAction(event -> new SnakeStage());
+        gamesMenu.getChildren().add(snake);
+        sp.setContent(gamesMenu);
+
+        Menu file = new Menu("File");
+
+
+        MenuItem games = new MenuItem("Games");
+        MenuItem apps = new MenuItem("Applications");
+        MenuItem tools = new MenuItem("Tools");
+        MenuItem exit = new MenuItem("Exit");
+        exit.setOnAction(event ->
+            System.exit(0)
         );
-        sp.getChildren().add(snakeButton);
-        Scene scene = new Scene(sp, 300, 350);
+
+        file.getItems().addAll(games, apps, tools, new SeparatorMenuItem(), exit);
+        mb.getMenus().addAll(file);
+        base.getChildren().addAll(mb, sp);
+
+        Scene scene = new Scene(base, 300, 350);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
