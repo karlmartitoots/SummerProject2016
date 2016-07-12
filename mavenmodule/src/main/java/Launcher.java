@@ -5,7 +5,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import snake.gui.SetupScene;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,7 @@ public class Launcher extends Application{
 
         Stage appStage = new Stage();
         MenuButton snakeButton = new MenuButton(new Image("snakegraphic.jpg"));
-        snakeButton.setOnAction(event -> appStage.setScene(new SetupScene(new Group(), appStage)));
+        snakeButton.setOnAction(event -> appStage.setScene(new snake.gui.SetupScene(new Group(), appStage)));
 
         List<MenuButton> gamesMenuButtons = new ArrayList<>();
         gamesMenuButtons.add(snakeButton);

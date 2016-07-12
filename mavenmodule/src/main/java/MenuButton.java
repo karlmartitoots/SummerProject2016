@@ -5,9 +5,9 @@ import javafx.scene.image.ImageView;
 public class MenuButton extends Button{
 
     public MenuButton(Image buttonImage){
-        this.setPrefSize(290,100);
-        this.setMaxSize(290,100);
-        this.setMinSize(290,100);
+        this.setPrefSize(290,150);
+        this.setMaxSize(290,150);
+        this.setMinSize(290,150);
         this.setGraphic(new ImageView(buttonImage));
     }
 }
