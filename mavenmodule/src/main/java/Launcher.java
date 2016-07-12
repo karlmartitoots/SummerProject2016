@@ -28,19 +28,22 @@ public class Launcher extends Application{
         menuScrollpane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         menuScrollpane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
 
+        Menu file = new Menu("File");
         Stage appStage = new Stage();
+
         MenuButton snakeButton = new MenuButton(new Image("snakegraphic.jpg"));
         snakeButton.setOnAction(event -> appStage.setScene(new snake.gui.SetupScene(new Group(), appStage)));
-
         List<MenuButton> gamesMenuButtons = new ArrayList<>();
         gamesMenuButtons.add(snakeButton);
-        Menu file = new Menu("File");
-
         MenuVBox gamesMenu = new MenuVBox(gamesMenuButtons);
 
         MenuVBox appsMenu = new MenuVBox();
 
-        MenuVBox toolsMenu = new MenuVBox();
+        MenuButton valuutaCalcButton = new MenuButton(new Image("javafxcalcgraphic.jpg"));
+        valuutaCalcButton.setOnAction(event -> appStage.setScene(new javaFXCalculator.SetupScene(new Group(), appStage)));
+        List<MenuButton> toolsMenuButtons = new ArrayList<>();
+        toolsMenuButtons.add(valuutaCalcButton);
+        MenuVBox toolsMenu = new MenuVBox(toolsMenuButtons);
 
         MenuItem games = new MenuItem("Games");
         games.setOnAction(event -> menuScrollpane.setContent(gamesMenu));
