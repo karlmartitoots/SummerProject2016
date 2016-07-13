@@ -33,8 +33,12 @@ public class Launcher extends Application{
 
         MenuButton snakeButton = new MenuButton(new Image("snakegraphic.jpg"));
         snakeButton.setOnAction(event -> appStage.setScene(new snake.gui.SetupScene(new Group(), appStage)));
+        MenuButton chessButton = new MenuButton(new Image("chessgraphic.jpg"));
+        chessButton.setOnAction(event -> appStage.setScene(new chess.SetupScene(new Group(), appStage)));
         List<MenuButton> gamesMenuButtons = new ArrayList<>();
         gamesMenuButtons.add(snakeButton);
+        gamesMenuButtons.add(chessButton);
+
         MenuVBox gamesMenu = new MenuVBox(gamesMenuButtons);
 
         MenuVBox appsMenu = new MenuVBox();
